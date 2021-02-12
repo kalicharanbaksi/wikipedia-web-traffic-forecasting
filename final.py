@@ -12,7 +12,6 @@ import pickle
 import pandas as pd
 import datetime
 import re
-from prettytable import PrettyTable
 import warnings
 warnings.filterwarnings('ignore')
 from sklearn.preprocessing import LabelEncoder,normalize
