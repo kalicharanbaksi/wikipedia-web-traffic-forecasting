@@ -1,8 +1,4 @@
 
-from google.colab import drive
-drive.mount('/content/drive')
-
-
 
 from flask import Flask, jsonify, request
 import numpy as np
