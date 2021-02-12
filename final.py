@@ -20,6 +20,7 @@ from keras.models import load_model
 
 class final:
   def final(self,page,date):
+    start=datetime.datetime.now()
     k=date.split("-")
     date2=datetime.date(int(k[0]),int(k[1]),int(k[2]))
     data=pd.read_csv("final.csv")
@@ -56,5 +57,6 @@ class final:
     x_pred=np.array(x_pred).reshape(1,200,1)
     pred=model.predict([x_pred,access_ohe,language_ohe,agent_ohe])
     pred=np.expm1(pred)
-    return agent[0],access[0],language[0],int(pred[0][0])
+    time=datetime.datetime.now()-start
+    return agent[0],access[0],language[0],int(pred[0][0]),time
 
