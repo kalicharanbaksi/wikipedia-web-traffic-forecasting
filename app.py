@@ -1,6 +1,6 @@
 
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request,render_template
 import numpy as np
 import pickle
 from keras.models import model_from_json
