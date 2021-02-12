@@ -58,5 +58,5 @@ class final:
     pred=model.predict([x_pred,access_ohe,language_ohe,agent_ohe])
     pred=np.expm1(pred)
     time=datetime.datetime.now()-start
-    return agent[0],access[0],language[0],int(pred[0][0]),time
+    return (agent[0],access[0],language[0],int(pred[0][0]),time)
 
