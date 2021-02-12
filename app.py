@@ -32,4 +32,4 @@ def predict():
     return flask.render_template('new.html',Client=client,Access=access,Language=language,predicted=predicted,time=time)
 
 if __name__ == '__main__':
-    app.run(debug=True,host="0.0.0.0")
+    app.run(debug=True)
