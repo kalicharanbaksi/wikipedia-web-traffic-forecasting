@@ -18,15 +18,13 @@ from sklearn.preprocessing import LabelEncoder,normalize
 from keras.models import load_model
 
 class final:
-  def predict(self,page,date):
+  def predict(self,index,date):
     start=datetime.datetime.now()
     k=date.split("-")
     date2=datetime.date(int(k[0]),int(k[1]),int(k[2]))
     data=pd.read_csv("final.csv")
-    index=data[data["Page"]==page].index.values
-    print(data.iloc[index[0]])
     index_column=data.columns.get_loc(str(date2))-804
-    k =np.array(data.iloc[index[0]].values[-200+index_column:index_column], dtype=int) 
+    k =np.array(data.iloc[index].values[-200+index_column:index_column], dtype=int) 
     x_pred=k[:200] 
     x_pred=np.log1p(x_pred)
     access=[]
