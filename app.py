@@ -21,7 +21,7 @@ final_object=final()
 
 @app.route('/',methods=['GET'])
 def home():
-    return flask.render_template('index.html')
+    return flask.render_template('index.html',template_folder="templates")
 
 
 @app.route('/predict', methods=['POST'])
