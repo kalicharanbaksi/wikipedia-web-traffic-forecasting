@@ -7,9 +7,7 @@ from keras.models import model_from_json
 import pandas as pd
 import datetime
 import re
-
 from final import final
-# https://www.tutorialspoint.com/flask
 import flask
 app = Flask(__name__)
 
