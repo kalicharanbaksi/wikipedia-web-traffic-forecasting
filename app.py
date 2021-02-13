@@ -28,7 +28,7 @@ def home():
 def predict():
     index=request.form.to_dict()['Enter_index']
     date=request.form.to_dict()['Enter_date']
-    client,access,language,predicted,time=final_object.final(index,date)
+    client,access,language,predicted,time=final_object.predict(index,date)
     return flask.render_template('new.html',Client=client,Access=access,Language=language,predicted=predicted,time=time)
 
 if __name__ == '__main__':
