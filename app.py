@@ -16,7 +16,7 @@ final_object=final()
 
 @app.route('/',methods=['GET'])
 def home():
-    return flask.render_template('Input.html')
+    return flask.render_template('input.html')
 
 
 @app.route('/predict', methods=['POST'])
@@ -24,7 +24,7 @@ def predict():
     index=request.form.to_dict()['Enter_page']
     date=request.form.to_dict()['Enter_date']
     agent,access,language,predicted,time=final_object.predict(index,date)
-    return flask.render_template('Output.html',Agent=agent,Access=access,Language=language,predicted=predicted,time=time)
+    return flask.render_template('output.html',Agent=agent,Access=access,Language=language,predicted=predicted,time=time)
 
 if __name__ == '__main__':
     app.run(debug=True)
