@@ -26,7 +26,7 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    index=request.form.to_dict()['Enter_index']
+    index=request.form.to_dict()['Enter_page']
     date=request.form.to_dict()['Enter_date']
     client,access,language,predicted,time=final_object.predict(index,date)
     return flask.render_template('new.html',Client=client,Access=access,Language=language,predicted=predicted,time=time)
