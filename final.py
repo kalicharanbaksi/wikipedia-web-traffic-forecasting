@@ -18,7 +18,7 @@ from sklearn.preprocessing import LabelEncoder,normalize
 from keras.models import load_model
 
 class final:
-  def final(self,page,date):
+  def predict(self,page,date):
     start=datetime.datetime.now()
     k=date.split("-")
     date2=datetime.date(int(k[0]),int(k[1]),int(k[2]))
