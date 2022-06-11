@@ -27,4 +27,4 @@ def predict():
     return flask.render_template('output.html',Agent=agent,Access=access,Language=language,predicted=predicted,time=time)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=8000,host="0.0.0.0")
