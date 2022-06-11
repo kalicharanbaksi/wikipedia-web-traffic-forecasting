@@ -1,4 +1,4 @@
-FROM ubuntu:20.4
+FROM ubuntu
 WORKDIR /flask-docker
 COPY requirements.txt requirements.txt
 RUN apt-get update && apt-get -y install python3-pip
